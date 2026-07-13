@@ -1,0 +1,33 @@
+:root {
+
+  /* Backgrounds */
+
+  --background-color: #FFFFFF;
+  --background-secondary-color: #F2F2F2;
+  --background-dark-color: #090B30;
+
+  /* Cores principais */
+
+  --primary-color: #2179CE;
+  --secondary-color: #3A74BA;
+  --accent-color: #FC7300;
+
+  /* Texto */
+
+  --text-color: #333333;
+  --text-secondary-color: #999999;
+  --text-muted-color: #AAAAAA;
+  --text-light-color: #FFFFFF;
+
+  /* Cores auxiliares */
+
+  --color-white: #FFFFFF;
+  --color-off-white: #EFECE2;
+
+
+  /* Feedback */
+
+  --success-color: #2FB344;
+  --error-color: #DC3545;
+  --error-text-color: #FF6B6B;
+}

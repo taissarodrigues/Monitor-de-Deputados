@@ -1,0 +1,100 @@
+/* Tipografia */
+
+:root {
+
+  /* Fonte */
+
+  --font-primary: "Roboto Condensed", sans-serif;
+
+  /* Pesos */
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* Tamanhos */
+
+  --font-size-xs: .875rem;
+  /*14px*/
+  --font-size-sm: 1rem;
+  /*16px*/
+  --font-size-md: 1.125rem;
+  /*18px*/
+  --font-size-lg: 1.25rem;
+  /*20px*/
+  --font-size-xl: 1.5rem;
+  /*24px*/
+  --font-size-hero: 3rem;
+  /*48px*/
+}
+
+/* Base */
+
+body {
+  font-family: var(--font-primary);
+  color: var(--text-color);
+}
+
+/* Hero */
+
+.title--main {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-hero);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.1;
+  color: var(--accent-color);
+}
+
+/* Seções */
+
+.title--section {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  color: var(--accent-color);
+}
+
+/* Cards */
+
+.title--card {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.3;
+}
+
+/* Texto grande */
+
+.text--large {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.5;
+}
+
+/* Texto médio */
+
+.text--medium {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.5;
+}
+
+/* Texto padrão */
+
+.text--regular {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.5;
+}
+
+/* Texto pequeno */
+
+.text--small {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.5;
+}

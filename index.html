@@ -4,13 +4,186 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Monitor de Banca</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Acompanhe informações sobre a bancada de deputados do Ceará.">
+
+  <title>Monitor da Bancada</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
+  <header class="site-header">
+    <nav class="site-header__navbar" aria-label="Navegação principal">
+      <button class="site-header__menu" type="button" aria-label="Abrir menu principal" aria-expanded="false">
+        <i class="bi bi-list" aria-hidden="true"></i>
+      </button>
 
-  <script src="script.js"></script>
+      <a class="site-header__logo" href="/">
+        <img src="assets/img/opovo_mais.svg" alt="O POVO Mais">
+      </a>
+
+      <div class="site-header__actions">
+        <button class="site-header__action site-header__action--search" type="button" aria-label="Abrir busca">
+          <i class="bi bi-search" aria-hidden="true"></i>
+        </button>
+
+        <button class="site-header__action site-header__action--profile" type="button"
+          aria-label="Abrir menu do usuário">
+          <i class="bi bi-person" aria-hidden="true"></i>
+        </button>
+
+        <button class="site-header__action site-header__action--notifications" type="button"
+          aria-label="Abrir notificações">
+          <i class="bi bi-bell-fill" aria-hidden="true"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="site-hero">
+      <h1 class="site-hero__title visually-hidden">Monitor da Bancada</h1>
+
+      <nav class="site-hero__breadcrumb" aria-label="Navegação estrutural">
+        <ol class="site-hero__breadcrumb-list">
+          <li class="site-hero__breadcrumb-item">
+            <a href="#">Início</a>
+          </li>
+
+          <li class="site-hero__breadcrumb-item">
+            <a href="#">Interativos</a>
+          </li>
+
+          <li class="site-hero__breadcrumb-item">
+            <span aria-current="page">Monitor da Bancada</span>
+          </li>
+        </ol>
+      </nav>
+
+      <div class="site-hero__image">
+        <img src="assets/img/monitor da bancada topo.png" alt="">
+      </div>
+
+      <p class="site-hero__description">
+        Ferramenta permite que pesquisas sejam agregadas e mostrem intenções de voto mais próximas da realidade.
+      </p>
+
+      <p class="site-hero__updated-at">
+        <time datetime="2026-07-20T09:25:00-03:00">
+          Atualizada às 09:25 — 20 jul. 2026
+        </time>
+      </p>
+
+      <div class="site-hero__social">
+        <ul class="site-hero__social-list" aria-label="Compartilhar nas redes sociais">
+          <li class="site-hero__social-item">
+            <a class="site-hero__social-link" href="#" aria-label="Compartilhar no Facebook">
+              <i class="bi bi-facebook" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="site-hero__social-item">
+            <a class="site-hero__social-link" href="#" aria-label="Compartilhar no Twitter">
+              <i class="bi bi-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="site-hero__social-item">
+            <a class="site-hero__social-link" href="#" aria-label="Compartilhar no WhatsApp">
+              <i class="bi bi-whatsapp" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="site-hero__social-item">
+            <a class="site-hero__social-link" href="#" aria-label="Compartilhar no LinkedIn">
+              <i class="bi bi-linkedin" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="site-hero__social-item">
+            <a class="site-hero__social-link" href="#" aria-label="Compartilhar no Telegram">
+              <i class="bi bi-telegram" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="deputies" aria-labelledby="deputies-title">
+      <h2 class="deputies__title" id="deputies-title">Deputados</h2>
+      <p class="deputies__status" id="deputies-status" role="status">Carregando deputados...</p>
+      <ul class="deputies__list" id="deputies-list" aria-busy="true"></ul>
+    </section>
+
+    <template id="deputy-card-template">
+      <li class="deputies__item">
+        <article class="deputy-card">
+          <div class="deputy-card__image">
+            <img class="deputy-card__photo" alt="">
+          </div>
+          <div class="deputy-card__content">
+            <h3 class="deputy-card__name"></h3>
+            <p class="deputy-card__party"></p>
+          </div>
+        </article>
+      </li>
+    </template>
+
+    <section class="methodology" aria-labelledby="methodology-title">
+      <h2 class="methodology__title" id="methodology-title">Metodologia</h2>
+      <p class="methodology__description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </p>
+      <p class="methodology__description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </p>
+    </section>
+    <section class="credits" aria-labelledby="credits-title">
+      <h2 class="credits__title" id="credits-title">Créditos</h2>
+      <ul class="credits__list">
+        <li class="credits__item">
+          <strong>Desenvolvimento:</strong> Equipe de Tecnologia do O POVO
+        </li>
+        <li class="credits__item">
+          <strong>Design:</strong> Equipe de Design do O POVO
+        </li>
+        <li class="credits__item">
+          <strong>Dados:</strong> Equipe de Dados do O POVO
+        </li>
+        <li class="credits__item">
+          <strong>Jornalismo:</strong> Equipe de Jornalismo do O POVO
+        </li>
+        <li class="credits__item">
+          <strong>Produção:</strong> Equipe de Produção do O POVO
+        </li>
+        <li class="credits__item">
+          <strong>Coordenação:</strong> Equipe de Coordenação do O POVO
+        </li>
+        <li class="credits__item">
+          <strong>Colaboração:</strong> Equipe de Colaboração do O POVO
+        </li>
+        <li class="credits__item">
+          <strong>Revisão:</strong> Equipe de Revisão do O POVO
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>
